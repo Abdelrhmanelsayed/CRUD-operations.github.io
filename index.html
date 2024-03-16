@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUDS</title>
+        <link rel="stylesheet" href="crud.css">
+    </head>
+    <body>
+        <div class="crud">
+            <div class="head">
+                <h1>CRUDS</h1>
+                <p>Product Management system</p>
+            </div>
+            <div class="inputs">
+                <input type="text" id="title" placeholder="title">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                    <input onkeyup="getTotal()" type="number" id="tax" placeholder="taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                    <small id="total"></small>
+                </div>
+                <input type="number" placeholder="count" id="count">
+                <input type="text" placeholder="category" id="category">
+                <button id="submit">Create</button>
+
+            </div>
+            <div class="output">
+                <div class="searchBlock">
+                    <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="search">
+                    <div class="btnsearch">
+                        <button onclick="getSearchMood(this.id)" id="searchtitle">Search By Title</button>
+                        <button onclick="getSearchMood(this.id)" id="searchcategory">Search By Category</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+            <button id="up">Up</button>
+        </div>
+        <script src="crud.js"></script>
+        
+    </body>
+</html>
